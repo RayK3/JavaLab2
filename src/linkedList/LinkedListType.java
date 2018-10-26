@@ -9,9 +9,10 @@ package linkedList;
  */
 public class LinkedListType {
 	private ListElement head;
-
+	private ListElement tail;
 	LinkedListType() {
 		this.head = null;
+		this.tail = null;
 	}
 	
 	// adds a previously created node to the beginning of the list

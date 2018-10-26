@@ -16,6 +16,7 @@ public class ListElement {
 	{
 		this.data = 0;
 		this.next = null;
+		this.prev = null;
 	}
 	
 	public void setData(int data) {
