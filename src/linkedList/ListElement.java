@@ -9,6 +9,7 @@ package linkedList;
  */
 public class ListElement {
 	public ListElement next;
+	public ListElement prev;
 	private int data;
 	
 	public ListElement()
