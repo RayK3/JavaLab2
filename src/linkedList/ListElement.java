@@ -8,7 +8,7 @@ package linkedList;
  *
  */
 public class ListElement {
-	private ListElement next;
+	public ListElement next;
 	private int data;
 	
 	public ListElement()
@@ -24,4 +24,6 @@ public class ListElement {
 	public int getData() {
 		return this.data;
 	}
+	
+	
 }
