@@ -17,6 +17,14 @@ public class LinkedListType {
 	
 	// adds a previously created node to the beginning of the list
 	public void addElement(ListElement le) {
+		// if the list is not empty
+		if(this.head != null) {
+			this.head.prev = le;
+		}
+		// if the list is empty
+		else {
+			this.tail = le;
+		}
 		le.next = this.head;
 		this.head = le;
 	}
@@ -37,13 +45,16 @@ public class LinkedListType {
 		for(int i = 0; i < index - 1; i++) {
 			curr = curr.next;
 		}
-		ListElement next = curr.next;
+		
+		// next is the node to be deleted
+		ListElement nextNode = curr.next;
 		
 		// link around it
-		curr.next = next.next;
+		curr.next = nextNode.next;
+		nextNode.next.prev = curr;
 		
 		// return the removed node
-		return next;
+		return nextNode;
 	}
 	
 	 public void printLinkedListHead() {
@@ -54,6 +65,18 @@ public class LinkedListType {
 			 System.out.print(" ");
 			 
 			 curr = curr.next;
+		 }
+		 System.out.print("\n");
+	 }
+	 
+	 public void printLinkedListTail() {
+		 ListElement curr = this.tail;
+		 
+		 while(curr != null) {
+			 System.out.print(curr.getData());
+			 System.out.print(" ");
+			 
+			 curr = curr.prev;
 		 }
 		 System.out.print("\n");
 	 }

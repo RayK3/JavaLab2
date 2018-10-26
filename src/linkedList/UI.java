@@ -26,16 +26,27 @@ public class UI {
 		ListElement le1 = new ListElement();
 		le1.setData(7);
 		
+		ListElement le2 = new ListElement();
+		le2.setData(9);
+		
 		
 		list.addElement(le);
 		list.addElement(le1);
 		list.printLinkedListHead();
-		ListElement le2 = list.getElement(1);
+		list.printLinkedListTail();
+		
+		list.addElement(le2);
+		
+		ListElement le3 = list.getElement(1);
+		
+		
+		list.printLinkedListHead();
+		list.printLinkedListTail();
 		
 		list.deleteElement(1);
 		
 		list.printLinkedListHead();
-		
+		list.printLinkedListTail();
 	}
 
 }
